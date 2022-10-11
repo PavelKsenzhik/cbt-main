@@ -535,8 +535,11 @@ button:focus {
   18% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fadeOutMain1 {
@@ -549,8 +552,11 @@ button:focus {
   18% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes fadeOut2 {
@@ -606,8 +612,11 @@ button:focus {
   65% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fadeOutMain2 {
@@ -623,8 +632,11 @@ button:focus {
   65% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes fadeOut3 {
@@ -674,8 +686,11 @@ button:focus {
   75% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes fadeOutMain3 {
@@ -691,8 +706,11 @@ button:focus {
   75% {
     opacity: 1;
   }
-  100% {
+  90% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes fadeOut4 {

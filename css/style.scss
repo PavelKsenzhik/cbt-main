@@ -517,8 +517,12 @@ button:focus {
         opacity: 1;
     }
 
-    100% {
+    90% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -567,10 +571,12 @@ button:focus {
         opacity: 1;
 
     }
-
+    90% {
+        opacity: 1;
+    }
 
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 @keyframes fadeOut3 {
@@ -609,8 +615,12 @@ button:focus {
         opacity: 1;
     }
 
-    100% {
+    90% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
