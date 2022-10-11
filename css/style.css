@@ -160,27 +160,27 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   color: white;
-  font-size: 3.5em;
+  font-size: 4em;
   position: absolute;
 }
 .main-banner__title1-wrapper {
-  top: 41%;
-  left: 46%;
+  top: 40%;
+  left: 44%;
   transform: translate(-50%, -50%);
 }
 .main-banner__title2-wrapper {
   top: 47%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
 .main-banner__title3-wrapper {
-  top: 52.5%;
-  left: 51.7%;
+  top: 53.5%;
+  left: 51.3%;
   transform: translate(-50%, -50%);
 }
 .main-banner__title4-wrapper {
   top: 46.5%;
-  left: 51.5%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .main-banner__title-main {
@@ -251,7 +251,7 @@ body {
 }
 .main-banner__custom-logo {
   height: 3.5em;
-  width: 14em;
+  width: 11em;
 }
 .main-banner__years {
   position: absolute;
