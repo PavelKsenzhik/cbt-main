@@ -154,81 +154,88 @@ body {
   /* Year */
   /* Btn link */
 }
+.main-banner__titles {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
 .main-banner__title-wrapper {
   display: flex;
-  opacity: 1;
+  opacity: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   color: white;
-  font-size: 4em;
-  position: absolute;
+  font-size: 3.5em;
+  letter-spacing: 1.5px;
+  position: relative;
+  left: 0;
 }
 .main-banner__title1-wrapper {
-  top: 40%;
-  left: 44%;
-  transform: translate(-50%, -50%);
+  -webkit-animation: 14s ease-in 0s fadeOutMain1;
+          animation: 14s ease-in 0s fadeOutMain1;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .main-banner__title2-wrapper {
-  top: 47%;
-  left: 49%;
-  transform: translate(-50%, -50%);
+  padding-top: 8px;
+  -webkit-animation: 14s ease-in 0s fadeOutMain2;
+          animation: 14s ease-in 0s fadeOutMain2;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .main-banner__title3-wrapper {
-  top: 53.5%;
-  left: 51.3%;
-  transform: translate(-50%, -50%);
+  padding-top: 8px;
+  -webkit-animation: 14s ease-in 0s fadeOutMain3;
+          animation: 14s ease-in 0s fadeOutMain3;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .main-banner__title4-wrapper {
-  top: 46.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-animation: 14s ease-in 0s fadeOutMain4;
+          animation: 14s ease-in 0s fadeOutMain4;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .main-banner__title-main {
-  opacity: 0;
   font-weight: 400;
-}
-.main-banner__title1-main {
-  -webkit-animation: 20s ease-in 1s fadeOutMain1;
-          animation: 20s ease-in 1s fadeOutMain1;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.main-banner__title2-main {
-  -webkit-animation: 20s ease-in 1s fadeOutMain2;
-          animation: 20s ease-in 1s fadeOutMain2;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.main-banner__title3-main {
-  -webkit-animation: 20s ease-in 1s fadeOutMain3;
-          animation: 20s ease-in 1s fadeOutMain3;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 .main-banner__title1, .main-banner__title2, .main-banner__title3, .main-banner__title4 {
   opacity: 0;
 }
 .main-banner__title1 {
-  -webkit-animation: 20s ease-in 1s fadeOut1;
-          animation: 20s ease-in 1s fadeOut1;
+  -webkit-animation: 14s ease-in 0s fadeOut1;
+          animation: 14s ease-in 0s fadeOut1;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 .main-banner__title2 {
-  -webkit-animation: 20s ease-in 1s fadeOut2;
-          animation: 20s ease-in 1s fadeOut2;
+  -webkit-animation: 14s ease-in 0s fadeOut2;
+          animation: 14s ease-in 0s fadeOut2;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 .main-banner__title3 {
-  -webkit-animation: 20s ease-in 1s fadeOut3;
-          animation: 20s ease-in 1s fadeOut3;
+  -webkit-animation: 14s ease-in 0s fadeOut3;
+          animation: 14s ease-in 0s fadeOut3;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 .main-banner__title4 {
-  -webkit-animation: 20s ease-in 1s fadeOut4;
-          animation: 20s ease-in 1s fadeOut4;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: 14s ease-in 0s fadeOut4;
+          animation: 14s ease-in 0s fadeOut4;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -250,8 +257,8 @@ body {
   line-height: 10px;
 }
 .main-banner__custom-logo {
-  height: 3.5em;
-  width: 11em;
+  height: 4em;
+  width: 12.2em;
 }
 .main-banner__years {
   position: absolute;
@@ -489,11 +496,8 @@ button:focus {
   18% {
     opacity: 1;
   }
-  25% {
-    opacity: 0;
-  }
   65% {
-    opacity: 0;
+    opacity: 1;
   }
   75% {
     opacity: 0;
@@ -512,11 +516,8 @@ button:focus {
   18% {
     opacity: 1;
   }
-  25% {
-    opacity: 0;
-  }
   65% {
-    opacity: 0;
+    opacity: 1;
   }
   75% {
     opacity: 0;
@@ -535,6 +536,9 @@ button:focus {
   18% {
     opacity: 1;
   }
+  65% {
+    left: 0%;
+  }
   90% {
     opacity: 1;
   }
@@ -551,6 +555,9 @@ button:focus {
   }
   18% {
     opacity: 1;
+  }
+  65% {
+    left: 0%;
   }
   90% {
     opacity: 1;
@@ -572,7 +579,10 @@ button:focus {
   43% {
     opacity: 1;
   }
-  50% {
+  65% {
+    opacity: 1;
+  }
+  75% {
     opacity: 0;
   }
   100% {
@@ -592,7 +602,10 @@ button:focus {
   43% {
     opacity: 1;
   }
-  50% {
+  65% {
+    opacity: 1;
+  }
+  75% {
     opacity: 0;
   }
   100% {

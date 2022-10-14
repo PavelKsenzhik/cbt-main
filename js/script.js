@@ -36,7 +36,7 @@ window.onload = function () {
                     
                     runYearsCount(startYear, maxYear);
                 }
-            }, 110)
+            }, 500)
         }
     }
     
