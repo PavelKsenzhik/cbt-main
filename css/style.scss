@@ -7,11 +7,40 @@ body {
     overflow-x: hidden;
 }
 
+
 .page-container {
-    max-width: 1530px;
+    max-width: 100%;
     height: 100%;
     margin: 0 auto;
 }
+
+@media(min-width: 576px) {
+    .page-container {
+        max-width: 720px;
+    }
+}
+@media(min-width: 768px) {
+    .page-container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .page-container {
+        max-width: 960px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .page-container {
+        max-width: 1530px;
+    }
+}
+
+
+
+
+
 
 .header {
     width: 100%;
@@ -158,26 +187,30 @@ body {
 .main-banner {
     margin: 0;
     height: 100vh;
+    min-height: 667px;
     font-weight: 100;
     background: radial-gradient(#000000, #003896);
     overflow-y: hidden;
     animation: fadeIn 1 1s ease-out;
-    position: relative;
     margin-bottom: 120px;
+
+    &__body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
     
     /* Titles */
 
     &__titles {
-        width: 35%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         height: max-content;
         position: absolute;
         top: 50%;
-        left: 55%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        overflow: hidden;
     }
 
     &__title-wrapper {
@@ -253,7 +286,7 @@ body {
     &__title4 {
         position: absolute;
         top: 50%;
-        left: 35%;
+        left: 50%;
         transform: translate(-50%,-50%);
         animation: 14s ease-in 0s fadeOut4;
         animation-iteration-count: infinite;
@@ -317,22 +350,22 @@ body {
     &__btn-link {
         border: 2px solid white;
         background: transparent;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         color: white;
-        width: 250px;
+        width: 310px;
         height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 1.8em;
         border-radius: 5px;
-        opacity: .5;
+        opacity: 0.5;
         top: 60vh;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
         margin: 0px 2em;
-        transition: .4s;
+        transition: 0.4s;
 
         &:hover {
             border: 2px solid #104F55;
@@ -378,6 +411,137 @@ body {
     }
 }
 
+@media (max-width: 1530px) {
+    .main-banner {
+        &__title-wrapper {
+            font-size: 2.5em;
+        }
+        &__custom-logo {
+            height: 3.5em;
+            width: 11em;
+        }
+
+        &__subtitle-primary {
+            font-size: 1.5em;
+        }
+
+        &__years {
+            font-size: 1.5em;
+        }
+
+        &__btn-link {
+            font-size: 1.5em;
+            width: 250px;
+            margin: 0 1em;
+        }
+    }
+}
+
+@media(max-width: 992px) {
+    .main-banner {
+
+        &__titles {
+            top: 50%;
+        }
+
+        &__subtitle-primary {
+            width: 100%;
+            bottom: 28%;
+        }
+
+        &__btn-link-wrapper {
+            flex-wrap: wrap;
+            bottom: 9%;
+        }
+        &__btn-link {
+            margin: 0 8px;
+            order: 1;
+            margin-bottom: 24px;
+            &.bottom {
+                margin-bottom: 0px;
+                order: 2;
+            }
+            &.bottom::after {
+                background: url('../img/arrow-bottom.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        
+    }
+}
+
+@media(max-width: 656px) {
+    .main-banner {
+        &__titles {
+            width: 100%;
+            align-items: center;
+        }
+        &__title-wrapper {
+            width: 330px;
+        }
+        &__title4 {
+            transform: translate(-80%, -50%);
+        }
+        &__custom-logo {
+            height: 3.5em;
+            width: 13em;
+        }
+    }
+}
+
+@media(max-width: 540px) {
+    .main-banner {
+        &__subtitle-primary {
+            bottom: 14%;
+        }
+        &__btn-link-wrapper {
+            display: none;
+        }
+        &__bottom-arrow {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            opacity: 0.6;
+            animation: 2s linear 0s bottomArrow infinite;
+            background: url('../img/arrow-bottom.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.4s;
+        }
+    }
+}
+
+@media(max-width: 520px) {
+    .main-banner {
+        &__title-wrapper {
+            font-size: 2em;
+            width: 265px;
+            padding-top: 4px;
+        }
+        &__title4 { 
+            transform: translate(-75%, -50%);
+        }
+        &__custom-logo {
+            width: 11.5em;
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    .main-banner {
+        &__title4 { 
+            transform: translate(-70%, -50%);
+        }
+        &__custom-logo {
+            width: 10em;
+        }
+    }
+}
 
 .light {
     position: absolute;
@@ -692,6 +856,18 @@ button:focus {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes bottomArrow {
+    0% {
+        bottom: 2%;
+    }
+    50% {
+        bottom: 4%;
+    }
+    100% {
+        bottom: 2%;
     }
 }
 
