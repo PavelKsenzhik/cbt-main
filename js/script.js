@@ -36,10 +36,16 @@ window.onload = function () {
                     
                     runYearsCount(startYear, maxYear);
                 }
-            }, 500)
+            }, 80)
         }
     }
-    
+
+    function playedMainBanner () {
+        document.querySelector('.main-banner').classList.add('_played')
+    }
+
+    setTimeout(playedMainBanner, 14000)
+
     setTimeout(setYearsCount(0, 25), 100);
 
 

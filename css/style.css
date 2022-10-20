@@ -163,13 +163,13 @@ body {
 .main-banner {
   margin: 0;
   height: 100vh;
-  min-height: 667px;
+  min-height: 600px;
   font-weight: 100;
   background: radial-gradient(#000000, #003896);
   overflow-y: hidden;
   -webkit-animation: fadeIn 1 1s ease-out;
           animation: fadeIn 1 1s ease-out;
-  margin-bottom: 120px;
+  transition-duration: 1.5s;
   /* Titles */
   /* Year */
   /* Btn link */
@@ -372,6 +372,23 @@ body {
   color: #fff;
 }
 
+.main-banner._played {
+  height: 40vh;
+  font-size: 13px;
+}
+.main-banner._played .main-banner__years {
+  top: 23%;
+}
+.main-banner._played .main-banner__titles {
+  top: 45%;
+}
+.main-banner._played .main-banner__btn-link-wrapper {
+  font-size: 16px;
+}
+.main-banner._played .main-banner__btn-link {
+  margin: 0px 24px;
+}
+
 @media (max-width: 1530px) {
   .main-banner__title-wrapper {
     font-size: 2.5em;
@@ -491,66 +508,67 @@ body {
   left: 0px;
   right: 0px;
   margin: auto;
+  transition-duration: 0.4s;
 }
 
 .x1 {
-  -webkit-animation: floatUp 4s infinite linear;
-          animation: floatUp 4s infinite linear;
+  -webkit-animation: floatUp 2.5s 1s 1 linear;
+          animation: floatUp 2.5s 1s 1 linear;
   transform: scale(1);
 }
 
 .x2 {
-  -webkit-animation: floatUp 7s infinite linear;
-          animation: floatUp 7s infinite linear;
+  -webkit-animation: floatUp 7s 0s 1 linear;
+          animation: floatUp 7s 0s 1 linear;
   transform: scale(1.6);
   left: 15%;
 }
 
 .x3 {
-  -webkit-animation: floatUp 2.5s infinite linear;
-          animation: floatUp 2.5s infinite linear;
+  -webkit-animation: floatUp 3s 1s 1 linear;
+          animation: floatUp 3s 1s 1 linear;
   transform: scale(0.5);
   left: -15%;
 }
 
 .x4 {
-  -webkit-animation: floatUp 4.5s infinite linear;
-          animation: floatUp 4.5s infinite linear;
+  -webkit-animation: floatUp 4.5s 2s 1 linear;
+          animation: floatUp 4.5s 2s 1 linear;
   transform: scale(1.2);
   left: -34%;
 }
 
 .x5 {
-  -webkit-animation: floatUp 8s infinite linear;
-          animation: floatUp 8s infinite linear;
+  -webkit-animation: floatUp 8s 1s 1 linear;
+          animation: floatUp 8s 1s 1 linear;
   transform: scale(2.2);
   left: -57%;
 }
 
 .x6 {
-  -webkit-animation: floatUp 3s infinite linear;
-          animation: floatUp 3s infinite linear;
+  -webkit-animation: floatUp 11s 2s 1 linear;
+          animation: floatUp 11s 2s 1 linear;
   transform: scale(0.8);
   left: -81%;
 }
 
 .x7 {
-  -webkit-animation: floatUp 5.4s infinite linear;
-          animation: floatUp 5.4s infinite linear;
+  -webkit-animation: floatUp 5.4s 2s 1 linear;
+          animation: floatUp 5.4s 2s 1 linear;
   transform: scale(3.2);
   left: 37%;
 }
 
 .x8 {
-  -webkit-animation: floatUp 4.7s infinite linear;
-          animation: floatUp 4.7s infinite linear;
+  -webkit-animation: floatUp 13s 1s 1 linear;
+          animation: floatUp 13s 1s 1 linear;
   transform: scale(1.7);
   left: 62%;
 }
 
 .x9 {
-  -webkit-animation: floatUp 4.1s infinite linear;
-          animation: floatUp 4.1s infinite linear;
+  -webkit-animation: floatUp 11s 2s 1 linear;
+          animation: floatUp 11s 2s 1 linear;
   transform: scale(0.9);
   left: 85%;
 }
@@ -940,207 +958,49 @@ button:focus {
     bottom: 2%;
   }
 }
-.projects {
+.advantages {
   width: 100%;
+  padding: 50px 0px;
+  background-color: #f3f3f3;
+}
+.advantages__body {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 120px;
 }
-
-.main-project {
+.advantages__title {
   width: 100%;
-  height: 760px;
-  margin-bottom: 64px;
-  background: url("../img/projects/main-project.png");
-  background-size: cover;
-  background-position: center;
-}
-.main-project__body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  transition-duration: 0.4s;
-}
-.main-project__title {
-  width: 70%;
+  font-size: 40px;
+  line-height: 61px;
+  color: #0a3a50;
   font-weight: 400;
-  color: #fff;
-  font-size: 60px;
-  line-height: 58px;
-  text-shadow: 0px 0px 32px #000;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition-duration: 0.4s;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.02em;
+  padding: 32px 0px 64px;
 }
-.main-project__col {
-  width: 50%;
-  padding-right: 32px;
-  transition-duration: 0.4s;
-  position: absolute;
-  opacity: 0;
-  top: 40%;
-}
-.main-project__col-right {
-  position: absolute;
-  right: -100%;
-}
-.main-project__col-left {
-  position: absolute;
-  left: -100%;
-}
-.main-project__item {
-  color: #fff;
-  text-shadow: 0px 0px 50px #000;
-  font-size: 22px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-}
-.main-project__item:not(:last-child) {
-  margin-bottom: 8px;
-}
-.main-project._hover .main-project__title {
-  top: 152px;
-  line-height: 48px;
-  transform: translate(-50%, 0%);
-  font-size: 50px;
-}
-.main-project._hover .main-project__col {
-  opacity: 1;
-}
-.main-project._hover .main-project__col-right {
-  right: 0%;
-}
-.main-project._hover .main-project__col-left {
-  left: 0%;
-}
-
-.secondary-projects {
+.advantages__list {
   width: 100%;
-  overflow: hidden;
-}
-.secondary-projects__body {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-.secondary-project {
-  width: 49%;
-  height: 500px;
-  position: relative;
-  transition-duration: 0.4s;
-}
-.secondary-project__title {
-  width: 90%;
-  text-align: center;
-  font-size: 2.5em;
-  color: #0D429B;
-  line-height: 46px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition-duration: 0.4s;
-}
-.secondary-project__list {
-  position: absolute;
-  bottom: -100px;
-  transition-duration: 0.4s;
-  opacity: 0;
-  visibility: hidden;
-}
-.secondary-project__item {
-  font-size: 20px;
-}
-.secondary-project__item:not(:last-child) {
-  margin-bottom: 8px;
-}
-.secondary-project._hover .secondary-project__title {
-  top: 32px;
-  transform: translate(-50%, 0%);
-  font-size: 2.5em;
-  line-height: 36px;
-}
-.secondary-project._hover .secondary-project__list {
-  position: absolute;
-  bottom: 64px;
-  left: 32px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.secondary-project-right {
-  background-image: url("../img/projects/secondary-project-right.png");
-  background-color: rgb(211, 211, 211);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.secondary-project-left {
-  background-image: url("../img/projects/secondary-project-left.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.nbrb__body {
-  display: flex;
-  height: 600px;
-}
-.nbrb__left {
-  width: 25%;
-  background-color: #f5f5f5;
-  padding: 30px 30px 30px 60px;
-}
-.nbrb__avatar {
-  display: flex;
-  align-items: center;
-}
-.nbrb__avatar span {
+.advantages .advantage {
+  width: 33.3333333333%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: #880015;
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  font-size: 14px;
-  font-weight: 700;
-  transform: rotateY(41deg) rotateX(21deg);
-  color: #fff;
-  -webkit-animation: 4s linear 0s infinite coin;
-          animation: 4s linear 0s infinite coin;
-  margin-right: 8px;
+  font-family: "Montserrat", sans-serif;
+  padding: 16px 0px;
+  margin-bottom: 64px;
 }
-.nbrb__avatar span:before {
-  background-color: #e5c100;
-  position: absolute;
-  border-radius: 50%;
-  content: "";
-  height: 100px;
-  width: 100px;
-  -webkit-transform: translateZ(-0.75em);
+.advantages .advantage__img {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 16px;
 }
-.nbrb__avatar span:after {
-  background-color: #e5c100;
-  content: "";
-  left: 45px;
-  position: absolute;
-  height: 94px;
-  width: 10px;
-  z-index: -10;
-  -webkit-transform: rotateY(-90deg);
-  -webkit-transform-origin: 100% 50%;
-}
-.nbrb__rigth {
-  width: 75%;
+.advantages .advantage__title {
+  color: #0A3A50;
+  font-size: 30px;
+  width: 80%;
+  font-weight: 400;
+  line-height: 36px;
 }/*# sourceMappingURL=style.css.map */
