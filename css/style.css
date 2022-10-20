@@ -1086,4 +1086,61 @@ button:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.nbrb__body {
+  display: flex;
+  height: 600px;
+}
+.nbrb__left {
+  width: 25%;
+  background-color: #f5f5f5;
+  padding: 30px 30px 30px 60px;
+}
+.nbrb__avatar {
+  display: flex;
+  align-items: center;
+}
+.nbrb__avatar span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #880015;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  font-size: 14px;
+  font-weight: 700;
+  transform: rotateY(41deg) rotateX(21deg);
+  color: #fff;
+  -webkit-animation: 4s linear 0s infinite coin;
+          animation: 4s linear 0s infinite coin;
+  margin-right: 8px;
+}
+.nbrb__avatar span:before {
+  background-color: #e5c100;
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  width: 100px;
+  -webkit-transform: translateZ(-0.75em);
+}
+.nbrb__avatar span:after {
+  background-color: #e5c100;
+  content: "";
+  left: 45px;
+  position: absolute;
+  height: 94px;
+  width: 10px;
+  z-index: -10;
+  -webkit-transform: rotateY(-90deg);
+  -webkit-transform-origin: 100% 50%;
+}
+.nbrb__rigth {
+  width: 75%;
 }/*# sourceMappingURL=style.css.map */
